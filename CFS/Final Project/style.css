@@ -1,0 +1,49 @@
+body  {
+    background-color:lightblue;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+  }
+  button{
+    display:block;
+    margin: .5em auto;
+  }
+  div{
+    margin: 5em auto;
+  }
+  form  {
+    display:block;
+    margin: auto auto;
+    width: 20%;
+    text-align: center;
+  }
+  h1{
+    display:block;
+    margin: 1em auto;
+    width: 80%;
+    text-align: center;
+  }
+  img {
+    width: 90px;
+    height: 90px;
+    float: left;
+  }
+  
+  #idCard {
+    Background:pink;
+    border: 5px solid black;
+    border-radius: 25px;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    height: 14em;
+    width: 25em;
+  }
+  #postFullName{
+    font-size: 1.5em;
+    text-align: center;
+    margin: 30px auto;
+  }
+  
+  #postAge,
+  #postPhoneNumber,
+  #postAddress{
+   padding-left:5px;
+  }
