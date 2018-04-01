@@ -316,35 +316,26 @@ h4 {
 }
 */
 /*
-@media screen and (min-width: 540px) {
-  .logo-h1 {
-  color: rgb(104, 255, 4);
-  display: inline-block;
-  font-size: 25px;
-  margin: 25px 0;
-  
-}
+
 
 }*/
 
-@media screen and (min-width: 700px) {
-    .menu-toggle {
+
+    .menu-toggle.active {
     display: none;
     }
-    .site-nav {
+    .site-nav.active {
       height: auto;
       position: absolute;
       background: transparent;
       float: right;
       clip-path: initial;
     }
-    .site-nav li {
+    .site-nav.active li {
       display: block;
       border: none;
     }
-    .toggle 
+    .menu-toggle.active 
     {
       display: none;
     }
-}
-

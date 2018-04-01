@@ -17,7 +17,7 @@
   <title>Dragonscape Photography</title>
 </head>
 
-<body>
+<body onresize="myFunction(-1)" class="width">
   <header>
     <div class="container">
       <div class="logo">
@@ -40,7 +40,7 @@
 
         </ul>
       </span>
-      <div class="menu-toggle"></div>
+      <div class="menu-toggle">
         <div class="toggle">
           <span></span>
           <span></span>
@@ -58,7 +58,26 @@
     <br>
 
   </header>
-  <script src="codepen.js"></script>
+  <span id="demo"></span>
+
+  <script src="codepen.js">
+        var txt = "";
+        var evt = "";
+        var func = "";
+        var myScript = "";/*
+        evt = object.addEventListener("resize", myScript);
+        func = object.onresize = function(){myScript};
+        
+        txt += "<p>innerWidth: " + window.innerWidth + "</p>";
+        txt += "<p>innerHeight: " + window.innerHeight + "</p>";
+        txt += "<p>outerWidth: " + window.outerWidth + "</p>";
+        txt += "<p>outerHeight: " + window.outerHeight + "</p>";
+        console.log(txt);
+        console.log(evt);
+        console.log(func);*/
+        
+
+    </script>
 </body>
 
 </html>
