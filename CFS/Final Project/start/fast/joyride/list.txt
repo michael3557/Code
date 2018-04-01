@@ -1,0 +1,11 @@
+ Volume in drive C has no label.
+ Volume Serial Number is 385E-D220
+
+ Directory of c:\Users\mcdoc\Documents\Code\CFS\Final Project\start\fast\furious
+
+[.]             [..]            list.txt        your_file.txt   
+               2 File(s)              0 bytes
+
+     Total Files Listed:
+               2 File(s)              0 bytes
+               2 Dir(s)  119,661,817,856 bytes free
