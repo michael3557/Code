@@ -23,9 +23,9 @@ header {
 }
 
 header::after {
-  /*content: '';
+  content: '';
   clear: both;
-  display: block;*/
+  display: block;
    content: '';
   display: table;
   clear: both;
@@ -42,6 +42,7 @@ header::after {
 .logo span {
   font-weight: 400;
 }
+
 
 .site-nav {
   position: absolute;
@@ -66,14 +67,12 @@ header::after {
 
 .site-nav li {
   border-bottom: 5px solid #575766;
-  
-
   /** hover  */
-  display: inline-block;
- /* margin-left: 70px;*/
-  padding-top: 23px;
-
-  position: relative;
+  display: block; /* caused drop down menu to b inline */
+ max-width: 200px;
+ /* margin-left: 70px; not needed*/
+  /*padding-top: 23px;   not needed moved menu down to far and didnt fix hover pushing down menu*/
+  position: relative; /*      made no change */
   /** end hover */
 }
 
@@ -84,24 +83,28 @@ header::after {
 .site-nav a {
   color: #EBEBD3;
   display: block;
-  padding: 2em 4em 2em 1.5em;
+  padding: 12px 0 0 0;
+  margin: 1.5em 1em 2em 1.5em;
+  max-width: 200px;
   text-transform: uppercase;
   text-decoration: none;
+  position: relative;
 }
 
 .site-nav a:hover,
 .site-nav a:focus {
-  background: #E4B363;
-  color: #464655;
+ /* background: #E4B363; */
+ /* color: #464655; */
 }
 
 .site-nav--icon {
-  display: inline-block;
+  display: inline;
   font-size: 1.5em;
-  margin-right: 1em;
-  width: 1.1em;
+  margin-right: 25px;
+  width: 5px;
   text-align: right;
   color: rgba(255,255,255,.4);
+  
 }
 
 .menu-toggle {
@@ -155,43 +158,55 @@ header::after {
   float: left;
   padding: 10px 0;
 } */
-nav {
-  float: right;
-}
-nav ul {
+
+/**nav 
+{
+   float: right; not needed all working  
+}*/
+
+/*nav ul {
   margin: 0;
-  padding: 0;
+  padding: 0;       same as .site-nav ul
   list-style: none;
-}
-nav li {
-}
-nav a {
-            /*color: rgb(136, 6, 6);*/
-           /* text-decoration: none;*/
-  text-transform: uppercase;
-  font-size: 14px;
-}
-nav a:hover {
+}*/ 
+
+/*nav li {
+      display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;            moved display and postion to .site-nav li
+
+  position: relative;          
+}*/ 
+/*nav a {
+            /*color: rgb(136, 6, 6); dup* .site-nav *
+           /* text-decoration: none; dup*     " *
+  /* text-transform: uppercase; dup*          " *
+  /* font-size: 14px;    smaller font as      "  *
+} */
+
+/*nav a:hover {
   color: #000;
-}
+}*/
+
 nav a::before {
   content: '';
-  display: inline-block;  /**       fixed hover  */
+  display: block;  /**       fixed hover  */
   height: 5px;
-  background-color: #444;
-
-          /***position: absolute;*/
-  top: 10px;
+  background-color: rgb(22, 19, 180);
+  position: absolute;
+  top: 12px;
+  
   width: 0%;
-
-  transition: all ease-in-out 250ms;
+  transition: all ease-in-out 450ms;
 }
+
+
 nav a:hover::before {
-  width: 100%;
+  width: calc(100% - 0px) ;
 }
 /**********************   new codepen endof copy               ************** */
 
-@media (min-width: 740px) {
+@media (max-width: 740px) {
   
   .menu-toggle {
     display: none;
@@ -208,16 +223,23 @@ nav a:hover::before {
   .site-nav li {
     display: inline-block;
     border: none;
+    position: relative;
   }
   
   .site-nav a {
-    padding: 0;
+    padding: 5px 0 0 0;
     margin-left: 3em;
+    position: relative;
+  }
+  nav a::before {
+  background: #444;
+  top: 0px;
+  transition: all ease-in-out 350ms;
   }
   
   .site-nav a:hover,
   .site-nav a:focus {
-    background: transparent;
+   /* background: transparent;*/
   }
   
   .site-nav--icon {

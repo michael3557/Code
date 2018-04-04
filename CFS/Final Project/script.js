@@ -50,4 +50,3 @@ function idCard(){
   
   let myButton = document.getElementById("onclick");
   myButton.addEventListener("click", idCard);
-  con
