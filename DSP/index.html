@@ -6,42 +6,41 @@
   <meta charset="utf-8" http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $('.toggle').click(function () {
-        $('.toggle').toggleClass('active')
-      })
-    })
-  </script>
   <title>Dragonscape Photography</title>
 </head>
 
 <body onresize="myFunction(-1)" class="width">
   <header>
     <div class="container">
-      <div class="logo">
-        <img class="logo-img" src="DSP_logo.png" alt="header image of AZ Desert">
-        <h1 class="logo-h1">Dragonscape Photography</h1>
+        <img class="logo" src="DSP_logo.png" alt="logo">
+        <h1 class="dsp-name">Dragonscape Photography</h1>
 
-      </div>
       
-      <span class="site-nav">
+      
+      <nav class="site-nav">
         <ul>
           <li>
-            <a href="index.html">Home</a>
+            <a href="">
+              <i class="fa fa-home site-nav--icon"></i><span class="hover">Home</span></a>
           </li>
           <li>
-            <a href="Photographs.html">Photographs</a>
+            <a href="">
+              <i class="fas fa-images site-nav--icon"></i><span class="hover">Images</span></a>
           </li>
           <li>
-            <a href="about.html">About</a>
+            <a href="">
+              <i class="fas fa-dollar-sign site-nav--icon"></i><span class="hover">Pricing</span></a>
           </li>
-
+          <li>
+            <a href="">
+              <i class="fa fa-envelope site-nav--icon"></i><span class="hover">Contact</span></a>
+          </li>
         </ul>
-      </span>
+      </nav>
       <div class="menu-toggle">
-        <div class="toggle">
+        <div class="toggle hamburger">
           <span></span>
           <span></span>
           <span></span>
@@ -52,32 +51,11 @@
       </div>
     </div>
 
-    <!-- <h1>Welcome to Dragonscape Photography</h1>
-        <img id="headerimage" src="./pic/header.jpg" alt="header image of AZ Desert"> -->
-    <br>
-    <br>
-
   </header>
+  <img id="home-page-image" src="pic/homePage.jpg"  alt="header image of AZ Desert"> 
   <span id="demo"></span>
 
-  <script src="codepen.js">
-        var txt = "";
-        var evt = "";
-        var func = "";
-        var myScript = "";/*
-        evt = object.addEventListener("resize", myScript);
-        func = object.onresize = function(){myScript};
-        
-        txt += "<p>innerWidth: " + window.innerWidth + "</p>";
-        txt += "<p>innerHeight: " + window.innerHeight + "</p>";
-        txt += "<p>outerWidth: " + window.outerWidth + "</p>";
-        txt += "<p>outerHeight: " + window.outerHeight + "</p>";
-        console.log(txt);
-        console.log(evt);
-        console.log(func);*/
-        
-
-    </script>
+  <script src="code.js"></script>
 </body>
 
 </html>
