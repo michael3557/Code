@@ -1,0 +1,40 @@
+#myheader {
+  align-items: center;
+  background-color: rgb(30, 83, 255);
+  display: flex;
+  justify-content: space-around;
+  height: 75px;
+}
+a {
+  color: gold;
+}
+#other {
+  align-items: center;
+  background-color: rgb(185, 185, 185);
+  display: flex;
+  height: 100%;
+  width: 25%;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+}
+#one {
+  height: 50px;
+}
+#two {
+  height: 75px;
+}
+#three {
+  height: 100px;
+}
+#four {
+  height: 75px;
+}
+#five {
+  height: 50px;
+}
+
+
+
+
+

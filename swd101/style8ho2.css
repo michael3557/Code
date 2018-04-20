@@ -1,0 +1,18 @@
+#head {
+ align-items: center;
+ flex: auto; 
+ display: flex;
+ justify-content: center;
+}
+#one {
+  height: 50px;
+}
+#two {
+  height: 75px;
+}
+#three {
+  height: 100px;
+}
+img {
+  height: 100%;
+}

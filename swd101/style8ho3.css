@@ -1,0 +1,20 @@
+#head {
+ align-items: center;
+ flex: auto; 
+ display: flex;
+ justify-content: space-evenly;
+ flex-direction: row-reverse;
+ flex-wrap: wrap;
+}
+#one {
+  height: 200px;
+}
+#two {
+  height: 150px;
+}
+#three {
+  height: 200px;
+}
+img {
+  height: 100%;
+}
