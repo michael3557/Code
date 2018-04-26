@@ -1,0 +1,14 @@
+form {
+  width: 80%;
+  padding: 5px;
+  background-color: rgba(68, 67, 68, 0.185);
+  
+}
+body{
+  width:90%;
+  margin: auto;
+}
+.col-sm-6 {
+  border: 1px solid black;
+
+}
