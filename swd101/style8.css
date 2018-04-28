@@ -16,3 +16,24 @@
   border: 1px solid white;
   width: 900px;
 }
+.links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login {
+  margin-left: 20px;
+}
+.header-container {
+  color: black;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  width: 900px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+}
