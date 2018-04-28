@@ -50,7 +50,7 @@ function loadRepo(url, callback) {
 
 function myFunction(xhttp) {
   let repo = JSON.parse(xhttp.responseText);
-  document.getElementById("example").innerHTML += repo + " :name: <br><br>";
+  document.getElementById("example").innerHTML += repo. + " :name: <br><br>";
   document.getElementById("example").innerHTML += repo.owner.html_url + "<br><br>";
   
 }
