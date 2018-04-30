@@ -1,107 +1,146 @@
 * {
-  margin: 0;
+  margin: auto;
   padding: 0;
   box-sizing: border-box;
 }
-
-.page-container {
-  color: white;
-  background-color: blue;
-  padding: 20px 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
+body{
+  background-color: rgb(2, 2, 12);
 }
-
-.page {
-  border: 1px solid white;
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.myPic {
-  display: flex;
-
-  justify-content: left;
-  padding: 10px;
-  
-}
-.myPic img {
-  width: 300px;
-  height: 300px;
-}
-.about {
-  display: flex;
-  justify-content:right;
-  flex-flow: wrap;
-  padding: 10px 5px 10px 20px;
-}
-.header-container {
-  color: black;
-  background-color: lightblue;
-  display: flex;
+.container {
+   display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: rgba(233, 230, 36, 0.26);
 }
 
-.header {
-  width: 900px;
-  height: 75px;
+.header-container {
+  color: rgb(247, 241, 241);
+  background-color: rgb(100, 100, 100);
   display: flex;
-  justify-content: space-around;
+
+  justify-content: center;
+ 
+}
+.header-container  .container{
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+}
+.name,
+.job,
+.header-logo{
+  display: flex;
+ margin: auto;
+ padding: 10px;
+ width: 350px;
+ justify-content: center;
+
+  height: 75px;
+  display: flex; 
   align-items: center;
   font: 2em san-serif;
-  color: rgb(75, 4, 4);
+
   font-weight: 700;
-  
+
 }
+
+.myPic img {
+  width: 400px;
+  display: flex;
+  justify-content: flex-start;
+}
+.myPic,
+.about,
+.repo {
+  padding: 15px;
+  color: white;
+  background-color: rgba(146, 255, 127, 0.116);
+}
+.repo{
+  height: 150px;
+}
+.myPic,
+.repo {
+  width: 500px;
+}
+ol {
+  text-align: center;
+}
+.about {
+  padding-top: 50px;
+  width: 60%;
+  margin: auto;
+}
+table {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.button {
+  color: black;
+  background-color: rgb(179, 175, 175);
+}
+
+
 
 .footer-container {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    
-    background-color: rgb(89,12, 12);
+    background-color: rgb(89, 12, 12);
     color: white;
-   
-  
 }
-.footer {
-  
-   display: flex;
-   justify-content: space-evenly;
-   align-items: center;
-   height: 75px;
-   font: 1.5em sans-serif;
+.footer-container .container {
+     font: 1.5em sans-serif;
+       display: flex;
+    justify-content: center;
+     padding: 0;
 }
-body {
-  display: flex;
-  flex-direction: column;
+
 }
 
 .footer-logo{
  margin: 0;
  padding: 0;
 }
+
 .phone,
 .email,
 .social {
-  padding: 0 15px;
+  padding: 0;
+  display: flex;  
+  justify-items: center; 
+  width: 325px;
+  align-items: center;
+  background-color: rgba(127, 255, 212, 0);
+  height: 75px;
 }
+
 
 .github,
 .instagram,
 .facebook,
 .linkedin {
   padding: 5px;
-  background-color: #fff;
+
 }
 .email a {
   color: rgb(2, 154, 255);
   
 }
-.social{
-   width: 500px;
+
+.space {
+  display: block;
+  height: 200px;
+  background-color: rgba(2, 154, 255, 0);
+}
+
+
+@media (max-width: 1200px) {
+    .footer-logo,
+    .phone,
+    .email {
+      height: 30px;
+   }
 }
