@@ -53,8 +53,9 @@ $(document).ready(function () {
 
     document.getElementById("repoList").innerHTML += "<h2>Repo List</h2>";
     for (let i = 0; i < repo.length; i++) {
-      console.log(i);
-      document.getElementById("repoList").innerHTML += "<li>" + repo[i].name + "</li>";
+
+      document.getElementById("repoList").innerHTML += 
+      "<li><a href='https://github.com/michael3557/" + repo[i].name + "'> " + repo[i].name + "</a></li>";
     }
     document.getElementById("repoList").innerHTML += "";
   }

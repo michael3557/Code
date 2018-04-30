@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Front End Foudations</title>
+  <title>Page Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
     crossorigin="anonymous">
@@ -16,37 +16,45 @@
   <div class="header-container">
     <div class="container">
       <div class="row">
-        <div class="col-xl-4">
+        <div class="col">
           <div class="job">Full Stack Developer</div>
         </div>
-        <div class="col-xl-4">
+        <div class="col">
           <div class="header-logo">
             <img src="DSP_logo.png" />
           </div>
         </div>
-        <div class="col-xl-4">
+        <div class="col">
           <div class="name">Michael Davis</div>
         </div>
       </div>
     </div>
   </div>
+  
 
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="myPic">
+          <img src="me2.jpg" alt="Facebook">
+        </div>
+      </div>
 
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="repo">
+          <ol>
+            <button class="button" type="button" onclick='loadDoc("https://api.github.com/users/michael3557/repos", myFunction)'>Get Github Repo List</button>
+            <div id="repoList"></div>
+          </ol>
+        </div>
+      </div>
+    </div>
 
-  <div class="myPic">
-    <img src="me2.jpg" alt="Facebook">
   </div>
-  <br>
-  <div class="repo">
-    <ol>
-      <button class="button" type="button" onclick='loadDoc("https://api.github.com/users/michael3557/repos", myFunction)'>Get Github Repo List</button>
-      <div id="repoList"></div>
-    </ol>
-  </div>
+  <div class="about">
 
-
-
-  <div class="skills">
     <Table class="table table-bordered table-dark">
       <thead>
         <tr>
@@ -95,7 +103,7 @@
             <span class="glyphicon glyphicon-envelope"></span>
             Email:
             <a href="mailto:michael.davis@my.scitexas.edu">
-              michael.davis@my.scitexas.edu</a>
+               michael.davis@my.scitexas.edu</a>
           </div>
         </div>
         <div class="col-xl-4">
