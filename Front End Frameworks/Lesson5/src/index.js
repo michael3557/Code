@@ -1,84 +1,69 @@
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 
-const API = 'https://api.github.com/users';
-class App extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      username: 'michael3557',
-      name:'',
-      avatar:'',
-      location:'',
-      repos:'',
-      followers: '',
-      following:'',
-      homeUrl:'',
-      notFound:''
-    }
-  }
-  fetchProfile(username) {
-    let url = `${API}/${username}`;
-    fetch(url)
-      .then((res) => res.json() )
-      .then((data) => {
-        this.setState({
-          username: data.login,
-          name: data.name,
-          avatar: data.avatar_url,
-          location: data.location,
-          repos: data.public_repos,
-          followers: data.followers,
-          following: data.following,
-          homeUrl: data.html_url,
-          notFound: data.message
-        })
-      })
-      .catch((error) => console.log('Oops! . There Is A Problem') )
-  }
-  componentDidMount() {
-    this.fetchProfile(this.state.username);
-  }
+
+class List extends React.Component {
   render() {
+  	console.log("List's render function"); // this should not happen if the exact same props are provided a second time
+    const list = this.props.items.map(item => (<li key={item}>{item}</li>));
+
     return (
-      <div>
-         <section id="card">
-           <Profile data={this.state} />
-         </section>
-      </div>
-    )
+      <ul>
+          {list}
+      </ul>
+    );
   }
+  
+  shouldComponentUpdate(nextProps, nextState) {
+        if (this.props.items !== nextProps.items){
+            return true;
+        }
+       
+        else{
+            return false;
+           
+        }
+      }
+       componentWillMount(){
+        console.log('componentWillMount');
+      }
+    componentDidMount(){
+        console.log('componentDidMount');
+    }
+    componentDidUpdate(){
+        console.log("The component Updated!");
+    }
+  
+}
+ 
+
+const list1Items = ['Eggs', 'Bread', 'Artisinal cheese'];
+const list2Items = ['Trains', 'Planes', 'Automobiles'];
+
+const render = (items) => {
+	console.log("outer render function");
+  ReactDOM.render(
+    <List items={items} />,
+    document.getElementById('root')
+  );
 }
 
 
-class Profile extends React.Component {
-  render() {
-    let data = this.props.data;
-    let followers = `${data.homeUrl}/followers`;
-    let repositories = `${data.homeUrl}?tab=repositories`;
-    let following = `${data.homeUrl}/following`;
-      return (
-        <section className="github--profile">
-          <div className="github--profile__info">
-            <a href={data.homeUrl} target="_blank" title={data.name || data.username}><img src={data.avatar} alt={data.username}/></a>
-            <h2><a href={data.homeUrl} title={data.username} target="_blank">{data.name || data.username}</a></h2>
-          </div>
-          <div className="github--profile__state">
-            <ul>
-               <li>
-                  <a href={followers} target="_blank" title="Number Of Followers"><i>{data.followers}</i><span>Followers</span></a>
-               </li>
-               <li>
-                  <a href={repositories} target="_blank" title="Number Of Repositoriy"><i>{data.repos}</i><span>Repositoriy</span></a>
-               </li>
-               <li>
-                  <a href={following} target="_blank" title="Number Of Following"><i>{data.following}</i><span>Following</span></a>
-               </li>
-            </ul>
-          </div>
-        </section>
-      );
+document.addEventListener('keydown', event => {
+  // this checks if the 1 key is pressed
+  if (event.code === 'Digit1') {
+		render(list1Items);  
   }
-}
+  // this checks if the 2 key is pressed
+  else if (event.code === 'Digit2') {
+	  render(list2Items);
+  }
+  
+});
 
-render(<App />, document.getElementById('root'));
+render(list1Items);
+
+ReactDOM.render(
+  <List/>,
+  document.getElementById('root')
+)
