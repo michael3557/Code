@@ -2,7 +2,7 @@ import React from "react";
 import { render } from 'react-dom';
 import Home from './screens/Home';
 import About from './screens/About';
-import Topics from './screens/Topics';
+import FavoriteThings from './screens/FavoriteThings';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const App = () => (
@@ -16,14 +16,14 @@ const App = () => (
           <Link to="/about">About</Link>
         </li>
         <li>
-          <Link to="/topics">Topics</Link>
+          <Link to="/favoritethings">Favorite Things</Link>
         </li>
       </ul>
 
       <hr />
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
-      <Route path="/topics" component={Topics} />
+      <Route path="/favoritethings" component={FavoriteThings} />
     </div>
   </Router>
 );
