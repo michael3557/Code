@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import App from './components/App';
 import reducer from './reducers/todo';
 
-const store = createStore(reducer, undefined, window.devToolsExtension ? window.devToolsExtension() : f => f)
+const store = createStore(reducer, undefined, window.devToolsExtension ? window.devToolsExtension() : f => f) // => lost me
 
 render(
   <Provider store={store}>

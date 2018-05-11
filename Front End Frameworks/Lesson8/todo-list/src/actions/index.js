@@ -11,4 +11,3 @@ export const removeTodo = (id) => (
         id
     }
 )
-}
