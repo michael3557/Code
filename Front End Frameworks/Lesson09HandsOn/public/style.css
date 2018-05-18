@@ -1,0 +1,10 @@
+div{
+  display: inline-block;
+}
+p {
+  display: inline;   /**Here is where i am moving the id onto the pics */
+  padding: 2px;
+  left: 85px;
+  bottom: 10px;
+  background-color: aquamarine;
+}

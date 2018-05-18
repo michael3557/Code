@@ -1,0 +1,57 @@
+.data {
+    text-align: left;
+    width: 250px;
+    height:80%;
+    margin: auto 15px;
+    background-color: rgb(252, 229, 181);
+    overflow-y: scroll;
+     float: left;
+}
+#root {
+  display: flex;
+  height: 100vh;
+  margin: 75px;
+  background-color: rgb(167, 165, 165);
+ 
+}
+p {
+ 
+  margin: 10px;
+  padding: 10px;
+  background-color:#F7C9AB;
+   overflow-x: hidden;
+}
+.form {
+ display: inline-block;
+   margin: 5px auto;
+   background-color: rgb(132, 83, 172);
+   width: 60%;
+   height: 80%;
+}
+.header {
+  text-align: center;
+  float: auto;
+  padding: 10px;
+
+  margin: 5px ;   
+  
+}
+.app {
+  width: 100%;
+}
+.header h1 {
+
+  display: inline-flex;
+  float: center;
+  margin: 5px auto;
+  width: 99%;
+   background-color: aqua;
+}
+
+form {
+  line-height: 2em;
+  padding: 30px;
+}
+button {
+  margin: 15px px;
+}
